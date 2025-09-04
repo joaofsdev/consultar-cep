@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar CEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="titulo">Consultar CEP</h1>
+        <button id="modo" onclick="alterarModo()">Modo Escuro</button>
+    </header>
+    <section class="formulario">
+        <form id="form">
+            <label>Digite o CEP:</label>
+            <input type="text" id="cep" name="cep" maxlength="9" placeholder="00000-000" required>
+            <button type="button" onclick="consultarCEP()">Consultar</button>
+        </form>
+    </section>
+
+    <section class="resultado">
+        <h3 class="titulo">Consultas:</h3>
+        <div block id="resultado">
+
+            <button type="button" onclick="alterar()">Alterar</button>
+            <button type="button" onclick="excluir()">Limpar</button>
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Joao Francisco da Silva.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
