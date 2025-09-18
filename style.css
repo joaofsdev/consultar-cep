@@ -1,32 +1,56 @@
+:root {
+  --bg-color: rgb(250, 249, 249);
+  --text-color: black;
+  --section-bg: rgb(255, 255, 255);
+  --section-border: black;
+  --button-bg: rgb(32, 32, 32);
+  --button-text: white;
+  --dark-section-bg: rgb(50, 50, 50);
+}
+
+body.dark-mode {
+  --bg-color: rgb(32, 32, 32);
+  --text-color: white;
+  --section-bg: rgb(50, 50, 50);
+  --section-border: black;
+  --button-bg: white;
+  --button-text: black;
+}
+
 body {
-  background: rgb(250, 249, 249);
+  background: var(--bg-color);
+  color: var(--text-color);
   font: normal 16px Arial;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
-  color: black;
+  color: var(--text-color);
   text-align: center;
   margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
 
 .formulario {
-  background: rgb(255, 255, 255);
-  border: 2px solid black;
+  background: var(--section-bg);
+  border: 2px solid var(--section-border);
   border-radius: 10px;
   padding: 15px;
   width: 500px;
   margin: auto;
   text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .resultado {
-  background: rgb(255, 255, 255);
-  border: 2px solid black;
+  background: var(--section-bg);
+  border: 2px solid var(--section-border);
   border-radius: 10px;
   padding: 15px;
   width: 500px;
   margin: 15px auto;
   min-height: 30px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .titulo {
@@ -34,7 +58,29 @@ header {
 }
 
 footer {
-  color: black;
+  color: var(--text-color);
   text-align: center;
   font-style: italic;
+  transition: color 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#modo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
